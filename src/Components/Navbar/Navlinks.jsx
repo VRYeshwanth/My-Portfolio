@@ -1,6 +1,6 @@
-export default function Navlinks() {
+export default function Navlinks(props) {
     return (
-        <nav className="nav-links">
+        <nav className={`nav-links ${props.isOpen ? "open" : ""}`}>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
