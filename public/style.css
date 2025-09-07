@@ -391,6 +391,8 @@ footer p {
 .skills .skill-icon {
     text-align: center;
     padding: 1rem;
+    transition: all 0.3s ease;
+    border-radius: 15px;
 }
 
 .skills .skill-icon i {
@@ -398,6 +400,15 @@ footer p {
     border-radius: 15px;
     padding: 0.3rem;
     margin-bottom: 1rem;
+}
+
+.skill-icon.hovered {
+    background-color: var(--primary-background);
+    color: var(--text-color);
+}
+
+.icon-name {
+    font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {
