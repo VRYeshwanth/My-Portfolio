@@ -9,8 +9,8 @@
 }
 
 :root {
-    --secondary-background: #dcdcdc;
     --primary-background: #111827;
+    --secondary-background: #e6f0ff;
     --text-color: #f3f4f6;
     --accent-color: #ff9800;
     --secondary-color: #22c55e;
@@ -117,7 +117,7 @@ header {
         width: 100%;
     }
     .nav-links a:hover {
-        background-color: var(--secondary-background);
+        background-color: #dcdcdc;
         color: var(--primary-background);
     }
 
@@ -129,12 +129,13 @@ header {
 /* Home Section */
 .home {
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
     padding: 2rem;
+    scroll-margin-top: 80px;
 }
 
 .left-section {
@@ -258,7 +259,7 @@ footer p {
 
 .projects {
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -336,7 +337,7 @@ footer p {
     align-items: center;
     padding: 2rem;
     gap: 3rem;
-    background-color: #e6f0ff;
+    background-color: var(--secondary-background);
     color: var(--primary-background);
     scroll-margin-top: 80px;
 }
@@ -429,4 +430,67 @@ footer p {
     .skills-row .heading h2 {
         font-size: 1.2rem;
     }
+}
+
+/* Contact Section */
+.contact {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 3rem;
+    background-color: var(--secondary-background);
+    color: var(--primary-background);
+    scroll-margin-top: 80px;
+}
+
+.contact h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+form input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 2px solid var(--primary-background);
+    border-radius: 15px;
+}
+
+form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 2px solid var(--primary-background);
+    border-radius: 15px;
+    resize: none;
+    height: 10rem;
+}
+
+form button {
+    font-size: 1.2rem;
+    background: #121212;
+    color: var(--text-color);
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+form button:hover {
+    transform: translateY(-5px);
 }
