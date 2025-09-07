@@ -9,7 +9,7 @@
 }
 
 :root {
-    --secondary-background: #ebebeb;
+    --secondary-background: #dcdcdc;
     --primary-background: #111827;
     --text-color: #f3f4f6;
     --accent-color: #ff9800;
@@ -32,9 +32,13 @@ header {
     width: 100%;
     height: 80px;
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+    z-index: 1000;
+    background-color: var(--primary-background);
 }
 
 .nav-logo h1 {
@@ -125,7 +129,7 @@ header {
 /* Home Section */
 .home {
     width: 100%;
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,6 +265,7 @@ footer p {
     align-items: center;
     gap: 3rem;
     padding: 2rem;
+    scroll-margin-top: 80px;
 }
 
 .projects h1 {
@@ -317,6 +322,100 @@ footer p {
         font-size: 2rem;
     }
     .card p {
+        font-size: 1.2rem;
+    }
+}
+
+/* About Section */
+.about {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 3rem;
+    background-color: #e6f0ff;
+    color: var(--primary-background);
+    scroll-margin-top: 80px;
+}
+
+.about h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-content .left img {
+    width: 350px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-background);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.about-content .right p {
+    font-size: 1.2rem;
+    flex: 1;
+    min-width: 300px;
+}
+
+.skills-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.skills-row .heading h2 {
+    font-size: 1.8rem;
+}
+
+.skills-row .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    width: 100%;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.skills .skill-icon {
+    text-align: center;
+    padding: 1rem;
+}
+
+.skills .skill-icon i {
+    font-size: 3rem;
+    border-radius: 15px;
+    padding: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 425px) {
+    .about h1 {
+        font-size: 2rem;
+    }
+    .about-content .left img {
+        width: 300px;
+    }
+    .about-content {
+        text-align: center;
+    }
+    .skills-row .heading h2 {
         font-size: 1.2rem;
     }
 }
