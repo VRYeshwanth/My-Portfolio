@@ -3,7 +3,7 @@ export default function Content() {
         <div className="about-content">
             <div className="left">
                 <img
-                    src="/My-Portfolio/images/user-image.png"
+                    src="/My-Portfolio_Practice/images/user-image.png"
                     alt="User Image"
                 />
             </div>
